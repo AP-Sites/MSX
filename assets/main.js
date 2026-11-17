@@ -1,0 +1,55 @@
+const menu = document.querySelector(".menu"),
+  nav = document.querySelector("nav");
+menu.addEventListener("click", () => {
+  let open = menu.getAttribute("aria-expanded") !== "true";
+  menu.setAttribute("aria-expanded", open);
+  nav.classList.toggle("open", open);
+  menu.textContent = open ? "Fechar ×" : "Menu ☰";
+});
+const dialog = document.querySelector("dialog");
+document.querySelectorAll("[data-client]").forEach((b) =>
+  b.addEventListener("click", (e) => {
+    e.preventDefault();
+    dialog.showModal();
+  }),
+);
+document.querySelector(".close").addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (e) => {
+  if (e.target === dialog) {
+    const r = dialog.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)
+      dialog.close();
+  }
+});
+document.querySelector("[data-password]").addEventListener("click", (e) => {
+  const p = document.querySelector("#senha");
+  p.type = p.type === "password" ? "text" : "password";
+  e.currentTarget.textContent = p.type === "password" ? "Mostrar" : "Ocultar";
+  e.currentTarget.setAttribute("aria-pressed", p.type === "text");
+});
+document.querySelectorAll("form").forEach((f) =>
+  f.addEventListener("submit", (e) => {
+    e.preventDefault();
+    f.querySelector("[role=status]").textContent =
+      f.id === "login"
+        ? "Demonstração: o portal ainda não está conectado. Nenhuma credencial foi enviada."
+        : "Mensagem validada nesta demonstração. O envio será habilitado após a configuração do atendimento.";
+    f.reset();
+  }),
+);
+nav.querySelectorAll("a").forEach((a) =>
+  a.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+    menu.textContent = "Menu ☰";
+  }),
+);
+dialog.addEventListener("close", () => {
+  const f = dialog.querySelector("form");
+  f.reset();
+  f.querySelector("[role=status]").textContent = "";
+  document.querySelector("#senha").type = "password";
+  const b = document.querySelector("[data-password]");
+  b.textContent = "Mostrar";
+  b.setAttribute("aria-pressed", "false");
+});

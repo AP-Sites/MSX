@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" role="img" aria-labelledby="title">
+  <title id="title">MSX Fomento Mercantil</title>
+  <path fill="#f7faf6" d="M5 73V17h10l25 23L76 6v16L40 56 17 35v38z" />
+  <path fill="#77c86d" d="M25 73 76 27v46H63V55L43 73z" />
+  <text
+    x="92"
+    y="53"
+    fill="#f7faf6"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="59"
+    font-weight="900"
+    letter-spacing="-3"
+  >
+    MSX
+  </text>
+  <text
+    x="96"
+    y="77"
+    fill="#f7faf6"
+    font-family="Arial,Helvetica,sans-serif"
+    font-size="10"
+    letter-spacing="3.1"
+  >
+    FOMENTO MERCANTIL
+  </text>
+</svg>

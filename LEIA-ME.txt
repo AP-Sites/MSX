@@ -1,0 +1,10 @@
+MSX - Modelo3
+Baseado na referência WhatsApp Image 2026-11-10 at 18.55.51.jpeg fornecida pela cliente.
+Os textos do cabeçalho, hero, explicação de fomento, processo e benefícios foram preservados. Foram adicionados soluções, documentos, dúvidas frequentes, contato, rodapé e privacidade.
+O logo foi reproduzido em SVG a partir da referência visual, com monograma branco/verde e assinatura branca. É uma reprodução vetorial aproximada, não o arquivo original da cliente. Para fidelidade tipográfica exata, substituir assets/logo-msx.svg pelo arquivo oficial.
+As imagens são as mesmas produzidas para os modelos anteriores, convertidas para JPEG para otimização.
+Solicite uma análise, Simule uma antecipação, os demais CTAs e Área do cliente abrem o mesmo dialog demonstrativo dos modelos anteriores. Nenhum dado é enviado ou armazenado. Não há cálculo ou autenticação nesta versão.
+Antes de publicar: confirmar textos e operações, dados de contato, portal, informações de privacidade e remover noindex após aprovação.
+HTML, CSS e JS estáticos, sem dependências, compatíveis com IIS. Abrir index.html.
+
+Revisão: ícone de aperto de mãos substituído por SVG Lucide nos dois locais. Licença incluída em assets/LUCIDE-LICENSE.txt. PDF de apresentação gerado com capturas reais das seções e do card flutuante. O card continua demonstrativo, sem autenticação no ERP.
