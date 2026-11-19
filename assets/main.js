@@ -53,3 +53,66 @@ dialog.addEventListener("close", () => {
   b.textContent = "Mostrar";
   b.setAttribute("aria-pressed", "false");
 });
+
+// Leitura resumida dos cards apenas no celular. Sem JS, o texto completo permanece visível.
+const compactCards = window.matchMedia("(max-width: 620px)");
+const institutionalCards = [...document.querySelectorAll(".institutional-card")];
+function setCardReading(card, expanded) {
+  const short = card.querySelector(".institutional-summary");
+  const full = card.querySelector(".institutional-details");
+  const button = card.querySelector(".institutional-toggle");
+  short.hidden = !compactCards.matches || expanded;
+  full.hidden = compactCards.matches && !expanded;
+  button.hidden = !compactCards.matches;
+  button.setAttribute("aria-expanded", String(expanded));
+  button.querySelector("[data-read-label]").textContent = expanded ? "Ler menos" : "Ler mais";
+  button.querySelector("[data-read-icon]").textContent = expanded ? "−" : "+";
+  button.setAttribute(
+    "aria-label",
+    `${expanded ? "Ler menos" : "Ler mais"} sobre ${button.dataset.cardTitle}`,
+  );
+}
+institutionalCards.forEach((card) => {
+  const button = card.querySelector(".institutional-toggle");
+  button.addEventListener("click", () =>
+    setCardReading(card, button.getAttribute("aria-expanded") !== "true"),
+  );
+});
+function updateCardLayout() {
+  institutionalCards.forEach((card) => setCardReading(card, !compactCards.matches));
+}
+compactCards.addEventListener("change", updateCardLayout);
+updateCardLayout();
+
+// Os perfis são configurados em social-config.js; nunca usar links genéricos da plataforma.
+const socialHosts = {
+  instagram: ["instagram.com", "www.instagram.com"],
+  facebook: ["facebook.com", "www.facebook.com", "m.facebook.com"],
+};
+document.querySelectorAll("[data-social]").forEach((link) => {
+  const configured = window.MSX_SOCIAL_PROFILES?.[link.dataset.social];
+  if (configured) {
+    try {
+      const url = new URL(configured);
+      if (
+        url.protocol === "https:" &&
+        socialHosts[link.dataset.social].includes(url.hostname) &&
+        url.pathname.length > 1
+      ) {
+        link.href = url.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.removeAttribute("aria-disabled");
+        const label = link.dataset.social === "instagram" ? "Instagram" : "Facebook";
+        link.setAttribute("aria-label", `${label} da MSX (abre em nova aba)`);
+        link.title = `${label} da MSX`;
+        link.querySelector("[data-social-state]").hidden = true;
+      }
+    } catch {
+      /* Perfil ausente ou inválido: manter o estado Em breve. */
+    }
+  }
+  link.addEventListener("click", (event) => {
+    if (link.getAttribute("aria-disabled") === "true") event.preventDefault();
+  });
+});

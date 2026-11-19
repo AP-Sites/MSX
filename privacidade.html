@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="MSX Fomento Mercantil. Transforme suas vendas a prazo em capital para o presente."
+      content="MSX Fomento Mercantil. Sua venda a prazo, no seu caixa hoje. Antecipação de recebíveis para empresas, com análise humana e valor líquido antes de fechar."
     />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="theme-color" content="#092b24" />
     <title>Privacidade | MSX Fomento Mercantil</title>
     <link rel="icon" type="image/png" href="assets/logo-original-transparente.png" />
-    <link rel="stylesheet" href="assets/style.css?v=20261116-whatsapp" />
-    <script src="assets/main.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css?v=20261118-marca" />
+    <script src="assets/social-config.js?v=20261118" defer></script>
+    <script src="assets/main.js?v=20261118-marca" defer></script>
   </head>
   <body>
     <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -26,12 +27,11 @@
             alt="MSX Fomento Mercantil" /></a
         ><button class="menu" aria-controls="navigation" aria-expanded="false">Menu ☰</button>
         <nav id="navigation" aria-label="Principal">
-          <a href="index.html#msx">A MSX</a
-          ><a href="index.html#solucoes">Soluções <span aria-hidden="true">⌄</span></a
+          <a href="index.html#msx">A MSX</a><a href="index.html#solucoes">Soluções</a
           ><a href="index.html#como-funciona">Como Funciona</a
           ><a href="index.html#documentos">Documentos</a><a href="index.html#contato">Contato</a
           ><button class="btn" data-client>
-            Solicite uma análise <span aria-hidden="true">→</span>
+            Acessar Sistema <span aria-hidden="true">→</span>
           </button>
         </nav>
       </div>
@@ -46,13 +46,16 @@
           área do cliente é demonstrativa: não autentica usuários, não envia credenciais a
           servidores e não armazena os dados digitados.
         </p>
-        <h2>Recursos utilizados</h2>
+        <h2>Recursos e links externos</h2>
         <p>
           As imagens, fontes do sistema, scripts e estilos são locais. O modelo não utiliza cookies
           de publicidade nem ferramentas de análise. O servidor pode manter registros de acesso
-          conforme sua configuração.
+          conforme sua configuração. Ao abrir o WhatsApp, o seu aplicativo de e-mail ou um perfil
+          social habilitado, você passa a utilizar um serviço externo, sujeito às próprias condições
+          de privacidade. Os ícones das redes sociais só terão links ativos após a confirmação dos
+          perfis da MSX.
         </p>
-        <h2>Próximos passos</h2>
+        <h2>Informações e canais de atendimento</h2>
         <p>
           Antes da publicação definitiva, a MSX deverá confirmar seus canais de atendimento, os
           responsáveis pelo tratamento de dados, as finalidades, os prazos e os fornecedores
@@ -68,17 +71,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <a class="brand" href="index.html"
-            ><img
-              src="assets/logo-original-transparente.png"
-              width="1984"
-              height="793"
-              alt="MSX Fomento Mercantil"
-          /></a>
-          <p>Mais fôlego para o presente.<br />Mais possibilidades para o seu negócio.</p>
+          <p>Sua venda a prazo,<br />no seu caixa hoje.</p>
           <div class="footer-links">
-            <a href="index.html#documentos">Documentos</a><a href="privacidade.html">Privacidade</a
-            ><a href="#" data-client>Área do cliente</a>
+            <a href="index.html#documentos">Documentos</a>
+            <a href="privacidade.html">Privacidade</a>
+            <a href="#" data-client>Área do cliente</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -90,12 +87,14 @@
     <dialog class="client-dialog" aria-labelledby="client-title">
       <button class="close" aria-label="Fechar">×</button
       ><span class="eyebrow">ÁREA DO CLIENTE</span>
-      <h2 id="client-title">Bem-vindo.</h2>
-      <p>Portal demonstrativo. Não utilize credenciais reais.</p>
+      <h2 id="client-title">Bem-vindo à MSX.</h2>
+      <p>Área do cliente demonstrativa. Nenhum dado é enviado; não utilize credenciais reais.</p>
       <form id="login" class="form">
         <label
-          >Cedente · CPF ou CNPJ<input
+          >Empresa que antecipa · CNPJ<input
             name="cedente"
+            inputmode="numeric"
+            aria-label="CNPJ da empresa que antecipa"
             required
             maxlength="18"
             autocomplete="off" /></label

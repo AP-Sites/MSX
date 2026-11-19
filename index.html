@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="MSX Fomento Mercantil. Transforme suas vendas a prazo em capital para o presente."
+      content="MSX Fomento Mercantil. Sua venda a prazo, no seu caixa hoje. Antecipação de recebíveis para empresas, com análise humana e valor líquido antes de fechar."
     />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="theme-color" content="#092b24" />
-    <title>Capital para o presente | MSX Fomento Mercantil</title>
+    <title>Sua venda a prazo, no seu caixa hoje. | MSX Fomento Mercantil</title>
     <link rel="icon" type="image/png" href="assets/logo-original-transparente.png" />
-    <link rel="stylesheet" href="assets/style.css?v=20261116-institucional" />
-    <script src="assets/main.js" defer></script>
+    <link rel="stylesheet" href="assets/style.css?v=20261118-dots" />
+    <script src="assets/social-config.js?v=20261118" defer></script>
+    <script src="assets/main.js?v=20261118-marca" defer></script>
+    <script src="assets/hero-carousel.js?v=20261118-dots" defer></script>
   </head>
   <body>
     <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -39,26 +41,135 @@
       </div>
     </header>
     <main id="conteudo">
-      <section class="hero">
-        <img
-          class="hero-photo"
-          src="assets/negocios.jpg"
-          width="1672"
-          height="941"
-          alt="Empresários analisando juntos o planejamento de seu negócio"
-        />
-        <div class="container">
-          <div class="hero-content">
-            <span class="eyebrow">Fomento Mercantil</span>
-            <h1>Transforme suas<br />vendas a prazo em<br /><em>capital para o presente.</em></h1>
-            <p>
-              A MSX antecipa os valores das suas vendas, dando mais fôlego e flexibilidade para o
-              crescimento do seu negócio.
-            </p>
-            <div class="actions">
-              <button class="btn" data-client>
-                Simule uma antecipação <span aria-hidden="true">→</span></button
-              ><a class="btn outline" href="#como-funciona">Entenda como funciona</a>
+      <section
+        class="hero hero-carousel"
+        aria-roledescription="carrossel"
+        aria-label="Destaques da MSX"
+      >
+        <div class="hero-controls" hidden aria-label="Escolher destaque">
+          <div class="hero-dots" role="group" aria-label="Escolher destaque">
+            <button
+              type="button"
+              data-hero-dot="0"
+              aria-label="Mostrar destaque 1: Sua venda a prazo, no seu caixa hoje."
+              aria-current="true"
+            >
+              <span aria-hidden="true"></span></button
+            ><button
+              type="button"
+              data-hero-dot="1"
+              aria-label="Mostrar destaque 2: Taxa dita antes, sem surpresa depois."
+              aria-current="false"
+            >
+              <span aria-hidden="true"></span></button
+            ><button
+              type="button"
+              data-hero-dot="2"
+              aria-label="Mostrar destaque 3: Além da ficha, tem uma história."
+              aria-current="false"
+            >
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <p class="visually-hidden" data-hero-status aria-live="polite" aria-atomic="true"></p>
+        <div
+          class="hero-slide is-active"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 de 3"
+        >
+          <img
+            class="hero-photo"
+            src="assets/negocios.jpg"
+            fetchpriority="high"
+            width="1672"
+            height="941"
+            alt="Empresários conversando sobre os recebíveis e o caixa do negócio"
+            decoding="async"
+          />
+          <div class="container">
+            <div class="hero-content">
+              <span class="eyebrow">Fomento Mercantil</span>
+              <h1 class="hero-title">Sua venda a prazo,<br /><em>no seu caixa hoje.</em></h1>
+              <p>
+                Vendeu a prazo e precisa do dinheiro agora? A MSX compra os recebíveis da sua
+                empresa, com análise humana e valor líquido explicado antes de fechar.
+              </p>
+              <div class="actions">
+                <button class="btn" data-client>
+                  Simule uma antecipação <span aria-hidden="true">→</span></button
+                ><a class="btn outline" href="#como-funciona">Entenda como funciona</a>
+              </div>
+              <p class="hero-assurance">Análise caso a caso. Conversa direta. Taxa clara.</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hero-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 de 3"
+          aria-hidden="true"
+          inert
+        >
+          <img
+            class="hero-photo"
+            data-src="assets/fluxo-caixa.jpg"
+            width="1672"
+            height="941"
+            alt="Planejamento do caixa da empresa com análise dos recebíveis"
+            decoding="async"
+          />
+          <div class="container">
+            <div class="hero-content">
+              <span class="eyebrow">Clareza em cada etapa</span>
+              <h2 class="hero-title">Taxa dita antes,<br /><em>sem surpresa depois.</em></h2>
+              <p>
+                Quanto vai cair na conta da sua empresa? Antes de fechar, você conhece a taxa, o
+                prazo, os custos e o valor líquido da antecipação.
+              </p>
+              <div class="actions">
+                <button class="btn" data-client>
+                  Simule uma antecipação <span aria-hidden="true">→</span></button
+                ><a class="btn outline" href="#como-funciona">Entenda como funciona</a>
+              </div>
+              <p class="hero-assurance">
+                Sua nota já vale dinheiro. A decisão começa com informação.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hero-slide"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 de 3"
+          aria-hidden="true"
+          inert
+        >
+          <img
+            class="hero-photo"
+            data-src="assets/relacionamento-empresarial.jpg"
+            width="1672"
+            height="941"
+            alt="Empresários reunidos em uma conversa sobre seus negócios"
+            decoding="async"
+          />
+          <div class="container">
+            <div class="hero-content">
+              <span class="eyebrow">Análise feita por gente</span>
+              <h2 class="hero-title">Além da ficha,<br /><em>tem uma história.</em></h2>
+              <p>
+                Conte o momento do seu negócio. A MSX analisa cada caso com atenção, conversa direta
+                e condições explicadas com clareza.
+              </p>
+              <div class="actions">
+                <button class="btn" data-client>
+                  Simule uma antecipação <span aria-hidden="true">→</span></button
+                ><a class="btn outline" href="#como-funciona">Entenda como funciona</a>
+              </div>
+              <p class="hero-assurance">Proximidade para entender. Sinceridade para responder.</p>
             </div>
           </div>
         </div>
@@ -67,15 +178,13 @@
         <div class="container intro-grid">
           <div class="intro-title">
             <span class="eyebrow">O que é<br />Fomento Mercantil?</span>
-            <h2>
-              É a antecipação<br />de valores das<br /><span class="green">suas vendas.</span>
-            </h2>
+            <h2>Você já vendeu.<br /><span class="green">A gente antecipa.</span></h2>
           </div>
           <div class="intro-text">
             <p>
-              A MSX compra os direitos de recebimento das suas vendas a prazo (títulos, como
-              duplicatas, cheques ou contratos), e antecipa o valor para você usar agora, sem criar
-              uma dívida no seu balanço.
+              Recebíveis são os valores que sua empresa já tem para receber por vendas a prazo. No
+              fomento mercantil, também conhecido como factoring, a MSX compra esses recebíveis e
+              antecipa o valor para o seu caixa, conforme a análise da operação.
             </p>
           </div>
           <div class="fact">
@@ -88,13 +197,35 @@
                 alt=""
                 aria-hidden="true"
               />
-              <h3>Não é empréstimo.</h3>
+              <h3>Sua nota já vale dinheiro.</h3>
             </div>
-            <p>Você recebe hoje o valor de uma venda que já é sua.</p>
+            <p>A gente não empresta. A gente antecipa o que é seu.</p>
           </div>
         </div>
-        <!-- Conteúdo institucional proposto para validação pela MSX. -->
-        <div class="container institutional-cards" aria-label="Sobre a MSX">
+        <div class="container fomento-terms" aria-label="Entenda os termos da antecipação">
+          <div>
+            <h3>Recebível</h3>
+            <p>
+              É o valor de uma venda que a empresa fez e ainda vai receber, como uma venda com nota
+              e boleto ou duplicata.
+            </p>
+          </div>
+          <div>
+            <h3>Deságio</h3>
+            <p>
+              É o desconto sobre o valor do recebível na antecipação. A taxa e o prazo da operação
+              entram nessa conta.
+            </p>
+          </div>
+          <div>
+            <h3>Valor líquido</h3>
+            <p>
+              É quanto vai cair na conta da sua empresa após os custos da operação. Você conhece
+              esse valor antes de fechar.
+            </p>
+          </div>
+        </div>
+        <div class="container institutional-cards" aria-label="Quem é a MSX">
           <article class="institutional-card">
             <span class="institutional-icon">
               <svg
@@ -110,11 +241,32 @@
                 <path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m3 10v-3a6 6 0 0 0-3-5" />
               </svg>
             </span>
-            <h3>Quem somos</h3>
-            <p>
-              Fomento mercantil com foco em empresas, recebíveis e relações próximas, conectando
-              vendas a prazo às necessidades do presente.
+            <h3 id="titulo-quem-somos">Quem somos</h3>
+            <p class="institutional-summary" hidden>
+              Recebíveis em dinheiro à vista, com análise humana e taxa clara.
             </p>
+            <div class="institutional-details" id="texto-quem-somos">
+              <p>
+                A MSX é uma empresa de fomento mercantil que transforma recebíveis em dinheiro à
+                vista, com análise humana, resposta rápida e taxa clara. Atendemos pequenas e médias
+                empresas que vendem a prazo e precisam de caixa para o dia a dia do negócio.
+              </p>
+              <p>
+                Além dos números, entendemos a história e o momento de quem empreende. A conversa é
+                direta, a análise é caso a caso e o valor líquido é apresentado antes de fechar.
+              </p>
+            </div>
+            <button
+              class="institutional-toggle"
+              type="button"
+              aria-controls="texto-quem-somos"
+              aria-expanded="false"
+              aria-label="Ler mais sobre quem somos"
+              data-card-title="quem somos"
+              hidden
+            >
+              <span data-read-label>Ler mais</span><span data-read-icon aria-hidden="true">+</span>
+            </button>
           </article>
           <article class="institutional-card">
             <span class="institutional-icon">
@@ -133,11 +285,28 @@
                 <path d="m15 9 6-6m-3 0h3v3" />
               </svg>
             </span>
-            <h3>Missão</h3>
-            <p>
-              Dar mais fôlego ao dia a dia de quem empreende, com soluções de fomento e clareza em
-              cada etapa da relação.
+            <h3 id="titulo-missao">Missão</h3>
+            <p class="institutional-summary" hidden>
+              Caixa no tempo do seu negócio, com análise humana e transparência.
             </p>
+            <div class="institutional-details" id="texto-missao">
+              <p>
+                Dar ao empresário que vende a prazo o caixa de que ele precisa, na hora em que
+                precisa, com análise humana e total transparência.
+              </p>
+              <p>E ajudá-lo a organizar o negócio para depender cada vez menos da urgência.</p>
+            </div>
+            <button
+              class="institutional-toggle"
+              type="button"
+              aria-controls="texto-missao"
+              aria-expanded="false"
+              aria-label="Ler mais sobre missão"
+              data-card-title="missão"
+              hidden
+            >
+              <span data-read-label>Ler mais</span><span data-read-icon aria-hidden="true">+</span>
+            </button>
           </article>
           <article class="institutional-card">
             <span class="institutional-icon">
@@ -154,11 +323,31 @@
                 <circle cx="12" cy="12" r="3" />
               </svg>
             </span>
-            <h3>Visão</h3>
-            <p>
-              Ser uma parceira de referência para empresas que buscam transformar suas vendas em
-              oportunidades de crescimento sustentável.
+            <h3 id="titulo-visao">Visão</h3>
+            <p class="institutional-summary" hidden>
+              Ser referência em fomento próximo e transparente para pequenas e médias empresas.
             </p>
+            <div class="institutional-details" id="texto-visao">
+              <p>
+                Ser reconhecida em todo o Brasil como o fomento mais próximo e transparente para
+                pequenas e médias empresas.
+              </p>
+              <p>
+                Construir relações de confiança com quem empreende, mantendo a clareza e o contato
+                direto em cada etapa.
+              </p>
+            </div>
+            <button
+              class="institutional-toggle"
+              type="button"
+              aria-controls="texto-visao"
+              aria-expanded="false"
+              aria-label="Ler mais sobre visão"
+              data-card-title="visão"
+              hidden
+            >
+              <span data-read-label>Ler mais</span><span data-read-icon aria-hidden="true">+</span>
+            </button>
           </article>
           <article class="institutional-card">
             <span class="institutional-icon">
@@ -175,37 +364,61 @@
                 <path d="m8 12 3 3 5-6" />
               </svg>
             </span>
-            <h3>Valores</h3>
-            <p>
-              Ética, transparência, respeito e proximidade: princípios que orientam o atendimento e
-              a construção de parcerias duradouras.
+            <h3 id="titulo-valores">Valores</h3>
+            <p class="institutional-summary" hidden>
+              Transparência, confiança, sinceridade, agilidade e proximidade.
             </p>
+            <div class="institutional-details" id="texto-valores">
+              <p>
+                Transparência, confiança, sinceridade, agilidade e proximidade orientam a nossa
+                forma de trabalhar.
+              </p>
+              <p>
+                Taxa, prazo e valor líquido são explicados antes de fechar. Cumprimos o combinado,
+                analisamos cada caso com atenção e, quando a resposta é não, explicamos o porquê.
+              </p>
+            </div>
+            <button
+              class="institutional-toggle"
+              type="button"
+              aria-controls="texto-valores"
+              aria-expanded="false"
+              aria-label="Ler mais sobre valores"
+              data-card-title="valores"
+              hidden
+            >
+              <span data-read-label>Ler mais</span><span data-read-icon aria-hidden="true">+</span>
+            </button>
           </article>
         </div>
       </section>
       <section class="section process" id="como-funciona">
         <div class="container process-grid">
           <div>
-            <span class="eyebrow">Como Funciona</span>
-            <h2>
-              Um processo <em>simples,<br />rápido e transparente.</em>
-            </h2>
+            <span class="eyebrow">Como funciona</span>
+            <h2>Seu recebível vira caixa.<br /><em>Você entende cada etapa.</em></h2>
           </div>
           <ol class="steps">
             <li>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M6 2h8l4 4v16H6zM14 2v5h5M9 11h6m-6 4h6m-6 4h6" />
               </svg>
-              <h3>1. Envie seus títulos</h3>
-              <p>Compartilhe as informações das suas vendas a prazo.</p>
+              <h3>1. Conte sobre a sua venda</h3>
+              <p>
+                Você vende a prazo com nota ou boleto? Apresente os dados da empresa, os títulos e
+                os vencimentos.
+              </p>
             </li>
             <li>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="10" cy="10" r="7" />
                 <path d="m15 15 7 7" />
               </svg>
-              <h3>2. Análise da operação</h3>
-              <p>Avaliamos os títulos e apresentamos as condições.</p>
+              <h3>2. Análise caso a caso</h3>
+              <p>
+                Gente que entende do negócio avalia os recebíveis, os prazos e quem vai pagar os
+                títulos.
+              </p>
             </li>
             <li>
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -214,8 +427,11 @@
                   d="M3 6v5c0 4 14 4 14 0V6M3 11v5c0 4 14 4 14 0v-5m0-3c6-1 6 4 0 5m0 0c6-1 6 4 0 5"
                 />
               </svg>
-              <h3>3. Receba o valor</h3>
-              <p>Com a aprovação, você recebe o valor antecipado e mantém o foco no seu negócio.</p>
+              <h3>3. Clareza antes de fechar</h3>
+              <p>
+                Você conhece taxa, prazo e valor líquido. Com a operação aprovada e formalizada, o
+                pagamento é feito conforme o combinado.
+              </p>
             </li>
           </ol>
         </div>
@@ -223,17 +439,18 @@
       <div class="container benefits">
         <div class="benefit">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m14 1-11 13h8l-2 9 12-14h-8z" />
+            <circle cx="9" cy="8" r="3" />
+            <path d="M3 21v-3a6 6 0 0 1 12 0v3m1-16a3 3 0 0 1 0 6m3 10v-3a6 6 0 0 0-3-5" />
           </svg>
-          <h3>Mais fôlego</h3>
-          <p>para o seu fluxo de caixa.</p>
+          <h3>Análise humana</h3>
+          <p>A história e o momento do seu negócio também entram na conversa.</p>
         </div>
         <div class="benefit">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 14h4v8H3zm7-6h4v14h-4zm7-6h4v20h-4z" />
           </svg>
-          <h3>Flexibilidade</h3>
-          <p>para planejar compras<br />e compromissos.</p>
+          <h3>Taxa clara</h3>
+          <p>Taxa dita antes, sem surpresa depois.</p>
         </div>
         <div class="benefit">
           <img
@@ -244,15 +461,15 @@
             alt=""
             aria-hidden="true"
           />
-          <h3>Parceria próxima</h3>
-          <p>com atendimento<br />especializado.</p>
+          <h3>Conversa direta</h3>
+          <p>Proximidade com quem entende e decide.</p>
         </div>
         <div class="benefit">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2 3 5v6c0 6 9 11 9 11s9-5 9-11V5zM8 12l3 3 5-6" />
           </svg>
-          <h3>Segurança</h3>
-          <p>e clareza em todas<br />as etapas.</p>
+          <h3>Resposta sincera</h3>
+          <p>O não vem com explicação.</p>
         </div>
       </div>
       <section class="section solutions" id="solucoes">
@@ -260,9 +477,12 @@
           <div class="section-heading">
             <div>
               <span class="eyebrow">Soluções para o seu negócio</span>
-              <h2>O valor das suas vendas.<br />Novas possibilidades para crescer.</h2>
+              <h2>Quem vende a prazo<br />não precisa viver no aperto.</h2>
             </div>
-            <p>Conheça como a antecipação pode fazer parte dos próximos passos da sua empresa.</p>
+            <p>
+              Antecipação de recebíveis para pequenas e médias empresas, com parceria, clareza e
+              análise caso a caso.
+            </p>
           </div>
           <div class="cards">
             <article class="card">
@@ -270,15 +490,15 @@
                 src="assets/fluxo-caixa.jpg"
                 width="1536"
                 height="1024"
-                alt="Análise de fluxo de caixa com gráficos e calculadora"
+                alt="Análise de fluxo de caixa e recebíveis de uma empresa"
                 loading="lazy"
                 decoding="async"
               />
               <div class="card-body">
                 <h3>Antecipação de recebíveis</h3>
                 <p>
-                  Suas vendas a prazo podem se transformar em recursos para organizar o caixa e dar
-                  continuidade à rotina da empresa.
+                  Sua empresa vendeu a prazo? A MSX compra os valores que ela já tem para receber. A
+                  operação é analisada conforme os títulos e os vencimentos.
                 </p>
                 <button data-client>
                   Simule uma antecipação <span aria-hidden="true">→</span>
@@ -290,15 +510,15 @@
                 src="assets/crescimento-financeiro.jpg"
                 width="1536"
                 height="1024"
-                alt="Empresária avaliando gráficos de crescimento financeiro"
+                alt="Empresária avaliando o planejamento financeiro do negócio"
                 loading="lazy"
                 decoding="async"
               />
               <div class="card-body">
-                <h3>Capital para novas oportunidades</h3>
+                <h3>Mais giro, com clareza</h3>
                 <p>
-                  Planeje compras, compromissos e oportunidades com mais flexibilidade. Converse
-                  sobre os recebíveis disponíveis para análise.
+                  Compras, contas e oportunidades têm seu tempo. Conheça o valor líquido da
+                  antecipação e avalie como ele se encaixa no caixa da sua empresa.
                 </p>
                 <button data-client>Solicite uma análise <span aria-hidden="true">→</span></button>
               </div>
@@ -308,15 +528,15 @@
                 src="assets/relacionamento-empresarial.jpg"
                 width="1536"
                 height="1024"
-                alt="Grupo de empresários conversando em um escritório"
+                alt="Empresários conversando diretamente sobre seus negócios"
                 loading="lazy"
                 decoding="async"
               />
               <div class="card-body">
                 <h3>Relacionamento que aproxima</h3>
                 <p>
-                  Uma conversa sobre o seu negócio, com informações claras sobre os títulos, a
-                  documentação e as condições de cada operação.
+                  Além da ficha, tem uma história. Conte sobre o seu negócio: a análise é feita por
+                  gente, com conversa direta e condições explicadas antes de fechar.
                 </p>
                 <a
                   class="card-contact"
@@ -328,9 +548,17 @@
               </div>
             </article>
           </div>
+          <aside class="cash-principle" aria-label="Caixa em ordem">
+            <strong>Dinheiro não aceita desaforo.</strong>
+            <p>
+              Conhecer o valor líquido, a taxa e o prazo ajuda a decidir com clareza e a planejar o
+              próximo mês do seu negócio.
+            </p>
+          </aside>
           <p class="note">
-            As operações estão sujeitas à análise dos títulos, do cadastro e das condições
-            comerciais. Prazos e valores são apresentados antes da formalização.
+            A antecipação está sujeita à análise do cadastro e dos recebíveis. Taxa, prazo, custos e
+            valor líquido são apresentados antes da formalização. O prazo de pagamento é combinado
+            em cada operação.
           </p>
         </div>
       </section>
@@ -338,102 +566,173 @@
         <div class="container split">
           <div>
             <span class="eyebrow">Documentos</span>
-            <h2>Uma boa análise começa<br />com informações claras.</h2>
+            <h2>Me conta sobre a venda.<br />A gente explica o próximo passo.</h2>
             <p>
-              Organize os dados da sua empresa e dos recebíveis. A equipe orientará quais documentos
-              são necessários de acordo com a operação.
+              A análise começa com os dados da sua empresa e do que ela tem para receber. A equipe
+              orienta a documentação necessária e esclarece as condições da operação.
             </p>
             <button class="btn" data-client>
               Solicite uma análise <span aria-hidden="true">→</span>
             </button>
             <p class="note">
-              Nesta apresentação, não há envio de documentos. Aguarde a indicação de um canal
-              oficial e seguro para compartilhar arquivos.
+              Nesta apresentação, não há envio de documentos. Confirme com a equipe o canal oficial
+              antes de compartilhar arquivos.
             </p>
           </div>
           <ol class="docs">
             <li>
               <b>01</b>
               <div>
-                <h3>Sobre a empresa</h3>
-                <p>CNPJ, contrato social atualizado e informações cadastrais.</p>
+                <h3>Dados da empresa</h3>
+                <p>CNPJ, contrato social atualizado e informações do negócio que vendeu a prazo.</p>
               </div>
             </li>
             <li>
               <b>02</b>
               <div>
-                <h3>Sobre os representantes</h3>
+                <h3>Representantes da empresa</h3>
                 <p>
-                  Identificação e documentos de representação, conforme orientação do atendimento.
+                  Identificação e comprovação de representação, conforme a orientação para o
+                  cadastro.
                 </p>
               </div>
             </li>
             <li>
               <b>03</b>
               <div>
-                <h3>Sobre as vendas a prazo</h3>
+                <h3>Dados dos recebíveis</h3>
                 <p>
-                  Relação dos títulos, vencimentos e documentos que comprovem a origem comercial dos
-                  recebíveis.
+                  Notas, boletos ou duplicatas, valores, vencimentos e informações de quem vai pagar
+                  os títulos. A documentação é definida conforme cada caso.
                 </p>
               </div>
             </li>
           </ol>
         </div>
       </section>
-      <!--
-      <section class="section faq">
+      <section class="section faq" id="duvidas">
         <div class="container split">
           <div>
             <span class="eyebrow">Dúvidas frequentes</span>
-            <h2>Entenda as etapas.<br />Decida com tranquilidade.</h2>
+            <h2>Fomento sem mistério.<br />Conversa sem letra miúda.</h2>
             <p>
-              Informação simples para começar uma conversa sobre as necessidades da sua empresa.
+              Primeiro a resposta. Depois, a explicação. Entenda como o seu recebível pode virar
+              caixa.
             </p>
           </div>
           <div>
             <details>
-              <summary>Quais títulos podem ser apresentados?</summary>
+              <summary>O que a MSX faz?</summary>
               <p>
-                Apresente os recebíveis originados das vendas da sua empresa. A possibilidade de
-                antecipação será avaliada conforme as características e os documentos de cada
-                título.
+                A gente não empresta: a gente compra o que a sua empresa já tem para receber por
+                vendas a prazo. Isso é fomento mercantil, também conhecido como factoring. O
+                benefício é a antecipação de recebíveis: o valor da venda chega ao caixa antes do
+                vencimento, conforme as condições da operação.
               </p>
             </details>
             <details>
-              <summary>Como são definidos os valores e as condições?</summary>
+              <summary>Quem pode conversar com a MSX?</summary>
               <p>
-                As condições são apresentadas após análise do cadastro, dos títulos e dos prazos
-                envolvidos. Não há aprovação automática nem taxas pré-definidas neste modelo.
+                Empresários de pequenas e médias empresas que vendem a prazo e precisam de caixa. O
+                atendimento de fomento é voltado a empresas, com análise do cadastro, dos recebíveis
+                e do momento de cada negócio.
               </p>
             </details>
             <details>
-              <summary>Posso conhecer as condições antes de decidir?</summary>
+              <summary>Tenho uma nota ou um boleto. Posso antecipar?</summary>
               <p>
-                Sim. A proposta deve esclarecer o valor líquido a receber, os custos, os prazos e as
-                etapas antes da formalização da operação.
+                Apresente os dados da venda, o valor, o vencimento e quem vai pagar o título. A
+                equipe avalia a origem comercial e os documentos. Cada recebível passa por análise;
+                apresentar um título não significa aprovação.
               </p>
             </details>
             <details>
-              <summary>O botão de simulação já calcula uma proposta?</summary>
+              <summary>Qual é a taxa e quanto cai na conta?</summary>
               <p>
-                Nesta apresentação, os botões abrem o mesmo formulário demonstrativo da área do
-                cliente. O cálculo de propostas e o acesso ao portal dependem de integração futura.
+                A taxa depende do prazo, de quem vai pagar o título e da análise da operação. Com os
+                dados dos recebíveis, mostramos o deságio, os custos e o valor líquido — quanto vai
+                cair na conta da sua empresa. Taxa dita antes, sem surpresa depois.
+              </p>
+            </details>
+            <details>
+              <summary>O que significa análise caso a caso?</summary>
+              <p>
+                É olhar os números e também entender a história e o momento da empresa. A conversa é
+                feita por gente e considera os dados do cadastro e dos títulos. A resposta vem
+                depois dessa análise, com condições claras.
+              </p>
+            </details>
+            <details>
+              <summary>Quando o valor é pago?</summary>
+              <p>
+                O prazo é informado na proposta. Após a aprovação, a conferência dos documentos e a
+                formalização, o pagamento segue o combinado. Você conhece o valor líquido e o prazo
+                antes de fechar.
               </p>
             </details>
           </div>
         </div>
       </section>
-	  -->
       <section class="section contact" id="contato">
         <div class="container split">
           <div>
             <span class="eyebrow">Contato</span>
-            <h2>Seu negócio tem planos.<br /><em>Vamos conversar sobre eles.</em></h2>
+            <h2>Sua nota já vale dinheiro.<br /><em>Vamos conversar?</em></h2>
             <p>
-              Conte o momento da sua empresa e conheça as possibilidades para transformar vendas a
-              prazo em capital para o presente.
+              Me conta: você vende a prazo com nota ou boleto? Apresente os dados da venda. A gente
+              analisa o caso e explica quanto pode cair na conta da sua empresa.
             </p>
+            <p class="contact-signature">
+              Seu recebível vira caixa, com clareza, no tempo do seu negócio.
+            </p>
+            <div class="social-presence">
+              <p>Acompanhe a MSX</p>
+              <div class="social-links">
+                <a
+                  class="social-link"
+                  data-social="instagram"
+                  role="link"
+                  aria-disabled="true"
+                  tabindex="0"
+                  aria-label="Instagram da MSX: perfil em breve"
+                  title="Instagram: perfil em breve"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" /></svg
+                  ><span>Instagram<small data-social-state>Em breve</small></span></a
+                ><a
+                  class="social-link"
+                  data-social="facebook"
+                  role="link"
+                  aria-disabled="true"
+                  tabindex="0"
+                  aria-label="Facebook da MSX: perfil em breve"
+                  title="Facebook: perfil em breve"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V2.4A22 22 0 0 0 15 2c-3 0-5 1.8-5 5v2H7v4h3v8Z"
+                    /></svg
+                  ><span>Facebook<small data-social-state>Em breve</small></span></a
+                >
+              </div>
+            </div>
           </div>
           <div class="contact-actions">
             <button class="btn" data-client>
@@ -466,17 +765,11 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-top">
-          <a class="brand" href="index.html"
-            ><img
-              src="assets/logo-original-transparente.png"
-              width="1984"
-              height="793"
-              alt="MSX Fomento Mercantil"
-          /></a>
-          <p>Mais fôlego para o presente.<br />Mais possibilidades para o seu negócio.</p>
+          <p>Sua venda a prazo,<br />no seu caixa hoje.</p>
           <div class="footer-links">
-            <a href="index.html#documentos">Documentos</a><a href="privacidade.html">Privacidade</a
-            ><a href="#" data-client>Área do cliente</a>
+            <a href="index.html#documentos">Documentos</a>
+            <a href="privacidade.html">Privacidade</a>
+            <a href="#" data-client>Área do cliente</a>
           </div>
         </div>
         <div class="footer-bottom">
@@ -488,12 +781,14 @@
     <dialog class="client-dialog" aria-labelledby="client-title">
       <button class="close" aria-label="Fechar">×</button
       ><span class="eyebrow">ÁREA DO CLIENTE</span>
-      <h2 id="client-title">Bem-vindo.</h2>
-      <p>Portal demonstrativo. Não utilize credenciais reais.</p>
+      <h2 id="client-title">Bem-vindo à MSX.</h2>
+      <p>Área do cliente demonstrativa. Nenhum dado é enviado; não utilize credenciais reais.</p>
       <form id="login" class="form">
         <label
-          >Cedente · CPF ou CNPJ<input
+          >Empresa que antecipa · CNPJ<input
             name="cedente"
+            inputmode="numeric"
+            aria-label="CNPJ da empresa que antecipa"
             required
             maxlength="18"
             autocomplete="off" /></label
